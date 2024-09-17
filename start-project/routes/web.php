@@ -28,3 +28,7 @@ Route::resource('/brand',BrandController::class);
 Route::resource('/mold', MoldController::class);
 
 Route::resource('/car', CarController::class);
+
+
+
+

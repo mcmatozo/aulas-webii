@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Car;
+use App\Models\Mold;
+use App\Models\Color;
+use App\Models\State;
 use Illuminate\Http\Request;
 
 class CarController extends Controller
@@ -26,7 +29,11 @@ class CarController extends Controller
      */
     public function create()
     {
-        //
+        $mold = Mold::all();
+        $color = Color::all();
+        $state = State::all();
+
+        return view('car.create', compact('mold','color','state'));
     }
 
     /**
@@ -37,7 +44,13 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $car = new Car();
+        $car->plate = $request->plate;
+        $car->mold_id = $request->mold_id;
+        $car->state_id = $request->state_id;
+        $car->cor_id = $request->color_id;
+        $car->save();
+        return redirect()->route('car.index');
     }
 
     /**
@@ -84,4 +97,5 @@ class CarController extends Controller
     {
         //
     }
-}
+
+    }
