@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\BrandController;
+use App\Http\Controllers\CarController;
+use App\Http\Controllers\ColorController;
+use App\Http\Controllers\MoldController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +18,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('home');
+})->name('home');
+
+Route::resource('/color', ColorController::class);
+
+Route::resource('/brand',BrandController::class);
+
+Route::resource('/mold', MoldController::class);
+
+Route::resource('/car', CarController::class);
