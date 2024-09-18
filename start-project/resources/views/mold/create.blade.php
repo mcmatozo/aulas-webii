@@ -17,7 +17,7 @@
                                 </div>
 
                                 <div class="input-group mb-3">
-                                    <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fas fa-palette">Eixo</i></span>
+                                    <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fas fa-palette">Marca</i></span>
                                     <select name="brand_id" class="form-control" aria-label="Sizing example select" aria-describedby="selectGroup-sizing-sm" required>
                                         <option value=""></option>
                                         @foreach($brand as $item)

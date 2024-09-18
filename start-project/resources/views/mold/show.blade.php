@@ -12,13 +12,13 @@
                                 <span class="input-group-text" id="inputGroup-sizing-sm">
                                     <i class="fas fa-palette">Nome</i>
                                 </span>
-                                <input type="text" name="name" value="{{ $mold->name }}" disabled class="form-control" id="color-name" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
+                                <input type="text" name="name" value="{{ $mold->name }}" disabled class="form-control" id="mold-name" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="inputGroup-sizing-sm">
-                                    <i class="fas fa-palette">Eixo</i>
+                                    <i class="fas fa-palette">Marca</i>
                                 </span>
-                                <input type="text" name="brand_id" value="{{ $mold->brand->name }}" disabled class="form-control" id="color-name" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
+                                <input type="text" name="mold_id" value="{{ $mold->brand->name }}" disabled class="form-control" id="mold-name" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
                             </div>
                         </div>
                         <a href="{{ route('mold.index') }}" class="btn btn-secondary btn-block">Voltar</a>

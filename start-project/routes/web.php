@@ -29,6 +29,8 @@ Route::resource('/mold', MoldController::class);
 
 Route::resource('/car', CarController::class);
 
+Route::get('/report/car/{car_id}', 'App\Http\Controllers\CarController@report')->name('car.report');
+
 
 
 

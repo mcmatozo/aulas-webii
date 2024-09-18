@@ -53,7 +53,7 @@
                     </div>
                         </div>
                         <button type="submit" class="btn btn-block" style="background-color: #FFCBDB; color: 	#000000; border-color: #FF69B4;">Salvar</button>
-                        <a href="{{ route('mold.index') }}" class="btn btn-block" style="background-color: #000000; color: #FFFFFF; border-color: #000000;">Voltar</a>
+                        <a href="{{ route('car.index') }}" class="btn btn-block" style="background-color: #000000; color: #FFFFFF; border-color: #000000;">Voltar</a>
                         </form>
                     </div>
                 </div>

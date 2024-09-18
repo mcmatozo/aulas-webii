@@ -25,7 +25,7 @@
                     <tr>
                         <td>{{ $item->id }}</td>
                         <td>{{ $item->name }}</td>
-                        <td>{{ $item->brand->name}}</td>
+                        <td>{{ $item->brand}}</td>
                         <td class="text-center">
                             <a href="{{ route('mold.show', $item->id) }}" class="btn btn-info">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="#FFF" class="bi bi-info-square-fill" viewBox="0 0 16 16">

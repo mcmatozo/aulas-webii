@@ -27,3 +27,7 @@ class Car extends Model
         return $this->belongsTo('App\Models\Mold');
     }
 }
+
+
+
+

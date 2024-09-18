@@ -44,14 +44,18 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {
+        $car = Car::find ($request->car);
+
         $car = new Car();
         $car->plate = $request->plate;
         $car->mold_id = $request->mold_id;
         $car->state_id = $request->state_id;
-        $car->cor_id = $request->color_id;
+        $car->color_id = $request->color_id;
         $car->save();
         return redirect()->route('car.index');
     }
+
+
 
     /**
      * Display the specified resource.
@@ -61,7 +65,11 @@ class CarController extends Controller
      */
     public function show($id)
     {
-        //
+        $car = Car::find($id);
+
+        if(isset($car)) return view('car.show', compact(['car']));
+
+        return 'ERROR';
     }
 
     /**
@@ -72,7 +80,11 @@ class CarController extends Controller
      */
     public function edit($id)
     {
-        //
+        $car = Car::find($id);
+
+        if(isset($car)) return view('car.edit', compact(['car']));
+
+        return "ERRO";
     }
 
     /**
@@ -98,4 +110,16 @@ class CarController extends Controller
         //
     }
 
+    public function report($id) {
+
+        $car = Car::where('car_id', $id)->get();
+        $dompdf = new Dompdf();
+        $dompdf->loadHtml(view('car.report', compact('car'))->render());
+        $dompdf->setPaper('A4', 'landscape');
+        $dompdf->render();
+        $dompdf->stream("relatorio-horas-turma.pdf", array("Attachment" => false));
     }
+
+    }
+
+
