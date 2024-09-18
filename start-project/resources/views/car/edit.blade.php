@@ -18,13 +18,13 @@
                                 </div>
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fas fa-palette">Cor</i></span>
-                                    <input type="text" name="name" value="{{ $mold->name }}" class="form-control" id="mold-name" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
+                                    <input type="text" name="name" value="{{ $color->name }}" class="form-control" id="cor-name" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
                                 </div>
                                 <div class="input-group mb-3">
-                                    <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fas fa-palette">Nome</i></span>
+                                    <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fas fa-palette">Modelo</i></span>
                                     <input type="text" name="name" value="{{ $mold->name }}" class="form-control" id="mold-name" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
                                 </div>
-                            </div>
+                            </div>      
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fas fa-palette">Marca</i></span>
                                 <select name="brand_id" class="form-control" aria-label="Sizing example select" aria-describedby="selectGroup-sizing-sm" required>
